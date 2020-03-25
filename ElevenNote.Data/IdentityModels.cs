@@ -30,4 +30,12 @@ namespace ElevenNote.WebMVC.Data
             return new ApplicationDbContext();
         }
     }
+    public class IdentityUserLoginConfiguration : EntityTypeConfiguration<IdentityUserLogin>
+    {
+        public IdentityUserLoginConfiguration()
+        {
+            HasKey(iul => iul.UserId);
+        }
+    }
+
 }
